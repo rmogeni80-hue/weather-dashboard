@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="weather-app">
+        <h1>Weather Dashboard</h1>
+        
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter city name..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="error" class="hidden"></div>
+
+        <section id="weather-display" class="hidden">
+            <h2 id="city-name"></h2>
+            <div class="weather-main">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <p id="temperature"></p>
+            </div>
+            <p id="description"></p>
+            <div class="weather-details">
+                <div class="detail"><span>Feels Like</span> <strong id="feels-like"></strong></div>
+                <div class="detail"><span>Humidity</span> <strong id="humidity"></strong></div>
+                <div class="detail"><span>Wind</span> <strong id="wind"></strong></div>
+                <div class="detail"><span>Pressure</span> <strong id="pressure"></strong></div>
+            </div>
+        </section>
+
+        <section class="recent-searches">
+            <h3>Recent Searches</h3>
+            <ul id="search-history"></ul>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
